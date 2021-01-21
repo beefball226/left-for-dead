@@ -1,0 +1,175 @@
+
+.bgc(@color){
+background-color:@color;
+}
+.margin(@top,@left){
+margin-top:@top;
+margin-left:@left;
+}
+.basic(@W,@H,@U,@D,@color){
+    width:@W;
+    height:@H;
+    border-radius: @U @D;
+    background-color:@color;
+}
+.posA(@top,@left){
+position:absolute;
+top:@top;
+left:@left;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#all {
+    .margin(-200px,-300px);
+    .posA(50%,50%);
+    .basic(600px,370px,0,0,black);
+}
+
+video {
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    .margin(30px,0px);
+}
+
+#bigdown {
+    position: absolute;
+    bottom: 0px;
+    .basic(600px,50px,0,0,rgba(0, 0, 0, .5));
+}
+
+#bar {
+    position: absolute;
+    .basic(100%,2px,0,0,rgba(201, 191, 191, 0.5));
+}
+
+#barin {
+    .basic(0px,2px,0,0,red);
+}
+
+#bar span {
+    position: absolute;
+    top: -6px;
+    display: none;
+    z-index: 100;
+    .basic(15px,15px,50%,50%,white);
+}
+
+#player {
+    float: left;
+    position: relative;
+    .margin(4px,0);
+    .basic(50px,46px,0,0,rgba(201, 191, 191, 0));
+}
+
+#player svg {
+    fill: white;
+    .posA(13px, 15px);
+    .basic(20px,20px,0,0,rgba(201, 191, 191, 0));
+}
+
+#stop {
+    position: absolute;
+    display: none;
+    .basic(20px,20px,0,0,rgba(201, 191, 191, 0));
+}
+
+#timer {
+    float: left;
+    color: white;
+    font-size: 14px;
+    line-height: 48px;
+    .basic(50px,48px,0,0,rgba(201, 191, 191, 0));
+}
+
+#sound {
+    float: right;
+    position: relative;
+    .margin(5px,0);
+    .basic(50px,45px,0,0,rgba(201, 191, 191, 0));
+}
+
+#sound svg {
+    fill: white;
+    .posA(11px, 15px);
+    .basic(20px,20px,0,0,rgba(201, 191, 191, 0));
+}
+
+#soundon {
+    display: none;
+    .posA(-140px,-8px);
+    .basic(60px,150px,10px,10px,rgba(0, 0, 0, .5));
+}
+
+#onin {
+    position: relative;
+    .margin(15px,28px);
+    .basic(3px,120px,1px,1px,rgba(131, 117, 117, 0.5));
+}
+#onin span {
+    position: absolute;
+    left: -6px;
+    .basic(15px,15px,50%,50%,white);
+    
+}
+
+#close {
+    display: none;
+}
+
+#set {
+    float: right;
+    .margin(5px,0);
+    .basic(50px,45px,0,0,rgba(131, 117, 117, 0));
+}
+
+#set svg {
+    fill: white;
+    .margin(10px,15px);
+    .basic(22px,22px,0px,0px,rgba(131, 117, 117, 0));
+}
+
+#full {
+    float: right;
+    .margin(5px,0);
+    .basic(50px,45px,0px,0px,rgba(131, 117, 117, 0.0));
+}
+
+#full svg {
+    fill: white;
+    .margin(12px,15px);
+    .basic(18px,18px,0px,0px,rgba(131, 117, 117, 0.0));
+}
+
+#speed {
+    float: right;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    margin-right: 5px;
+    color:white;
+    .margin(5px,0);
+    .basic(50px,45px,0px,0px,rgba(131, 117, 117, 0.0));
+}
+
+#speedin {
+    width: 70px;
+    /* height: 80px; */
+    list-style: none;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    .bgc(rgba(0, 0, 0, .5));
+    .posA(-142px,-10px);
+}
+
+#speedin li {
+    text-align: center;
+    line-height: 30px;
+    .basic(70px,30px,0px,0px,rgba(131, 117, 117, 0.0));
+}
